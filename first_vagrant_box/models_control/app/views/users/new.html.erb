@@ -1,0 +1,26 @@
+<h2>Users</h2>
+<hr>
+<table border="1">
+  <tr>
+    <th>ID:</th>
+    <th>Name:</th>
+    <th>Created At:</th>
+    <th>Updated At:</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+    <td><%= user.created_at %></td>
+    <td><%= user.updated_at %></td>
+  </tr>
+  <% end %>
+</table>
+<hr>
+<h3><u>Add a User</u></h3>
+<form action="/users" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  Name: <input type="text" name="name" placeholder="name">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>

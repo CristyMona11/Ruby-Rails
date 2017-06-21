@@ -1,0 +1,15 @@
+<h1>New Dojo</h1>
+<form action="/dojos" method="post">
+ <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    Branch:<input type="text" name="branch">
+    <br><br>
+    Street:<input type="text" name="street">
+    <br><br>
+    City:<input type="text" name="city">
+    <br><br>
+    State:<input type="text" name="state">
+    <br><br>
+    <input type="submit" value="Create">
+</form>
+<br>
+<a href="/">Home</a>

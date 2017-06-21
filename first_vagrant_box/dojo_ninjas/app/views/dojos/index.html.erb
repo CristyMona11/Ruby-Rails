@@ -1,0 +1,30 @@
+<h1>Dojos Home</h1>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Created At</td>
+  </tr>
+  <% @dojos.each do |dojo| %>
+  <tr>
+    <td><%= dojo.name %></td>
+    <td><%= dojo.city %></td>
+    <td><%= dojo.state %></td>
+    <td><%= dojo.created_at %></td>
+
+  </tr>
+  <% end %>
+</table>
+<h2>Insert New Dojo Location</h2>
+<form action="/dojos" method="post">
+  <input type="hidden" name="authenticity_token"
+  value="<%= form_authenticity_token %>">
+  Name:<input type="text" name="name" placeholder="Name">
+  <br>
+  City:<input type="text" name="city" placeholder="City">
+  <br>
+  State:<input type="text" name="state" placeholder="State">
+  <br>
+  <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,13 @@
+<h1><u>Submitted Information</u></h1>
+<div id="container">
+	<% if flash[:success] %>
+  		<div id="success">
+  			<p><%= flash[:success] %></p>
+		</div>
+<% end %>
+
+<p>Name: <%= @show['name'] %> </p>
+<p>Dojo Location:<%= @show.['dojo_location'] %></p>
+<p>Favorite Language: <%= @show.['favorite_language'] %></p>
+<p>Comment: <%= @show.['comment'] %></p>
+<button type="button" name="back">Go Back</button>
